@@ -1,0 +1,34 @@
++r
+Starting program: /home/minimee/Desktop/Bootcamp_IITb/week1_warmup/Debugging_with_GDB/a.out 
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555523e in main (argc=1, argv=0x7fffffffdff8) at pointers.cpp:13
+13	  cout << *p << endl;
++l
+8	  int *q = NULL;
+9	
+10	  cout << *p << endl;
+11	
+12	  p = q;
+13	  cout << *p << endl;
+14	
+15	  p = &b;
+16	  cout << *p << endl;
+17	
++b 13
+Breakpoint 1 at 0x55555555523a: file pointers.cpp, line 13.
++print *p
+Cannot access memory at address 0x0
++set var p = &a
++n
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
++r
+Starting program: /home/minimee/Desktop/Bootcamp_IITb/week1_warmup/Debugging_with_GDB/a.out 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffdff8) at pointers.cpp:13
+13	  cout << *p << endl;
++bt
+#0  main (argc=1, argv=0x7fffffffdff8) at pointers.cpp:13
++q
