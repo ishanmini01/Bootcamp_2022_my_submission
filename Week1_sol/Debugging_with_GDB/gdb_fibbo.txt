@@ -1,0 +1,16 @@
++run
+Starting program: /home/minimee/Desktop/Bootcamp_IITb/week1_warmup/Debugging_with_GDB/a.out 
+[Inferior 1 (process 3527) exited normally]
++l
+1	#include<iostream>
+2	using namespace std;
+3	
+4	int main(int argc, char* argv[]) {
+5	
+6	  int n = 10;
+7	
+8	  int second_last = 1;
+9	  int last = 1;
+10	
+Error detected on fd 0
+error detected on stdin
